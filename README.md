@@ -20,7 +20,8 @@
 
 - [ ] 자신의 운영체제에 맞는 `Node.js`를 설치합니다.
 - [ ] [ESlint 공식 문서](https://eslint.org)를 참고하여 `ESlint`를 내 Project에 설치하고 configure 합니다.
-- [ ] [Jest 공식 문서](https://jestjs.io/)를 참고하여 `Jest`를 내 Proejct에 설치한 후 간단한 Testcase를 스스로 작성하고 test를 실행해봅니다.
+- [ ] [Jest 공식 문서](https://jestjs.io/)를 참고하여 `Jest`를 내 Proejct에 설치합니다.
+- [ ] `test-example` folder 에서 간단한 Testcase들을 스스로 작성하고 test를 실행해봅니다.
 
 ## Pair programming에서 해볼 것들
 
