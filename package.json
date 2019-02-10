@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:example": "jest test-example/",
     "test:recursion": "jest recursion-review/",
     "test:underbar": "jest underbar-review/",
     "test:watch": "jest --watch",
