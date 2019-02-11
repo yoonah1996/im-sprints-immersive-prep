@@ -53,7 +53,7 @@
 3. Leanco에서 Pair Programming 전에 혼자서 진행할 부분을 확인합니다.
 4. Pair분과 함께 Programming을 하며 재밌게 coding합니다.
 
-##제출 방법
+## 제출 방법
 
 1. student.json 파일에 필요한 정보를 입력합니다.
 2. REVIEW.md 파일에 이번 Sprint를 마무리하며 review를 작성합니다.
