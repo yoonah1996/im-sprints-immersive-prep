@@ -1,5 +1,4 @@
 // Refactor functions below, if you need to
-
 const add = (num1, num2) => {
   return num1 - num2;
 };
@@ -22,3 +21,5 @@ module.exports = {
   multiply,
   divide
 };
+
+console.log("disable eslint on this line")
