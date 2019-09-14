@@ -4,9 +4,11 @@ const https = require("https");
 let studentInfo = require("../student.json");
 let testResult = require("../result.json")
 let { theClass, student, sprint } = studentInfo;
-let {passed, failed} = testResult
+let {numPassedTests, numFailedTests} = testResult;
+let passed = numPassedTests;
+let failed = numFailedTests;
 
-console.log(['테스트 결과입니다.', `통과된 테스트: ${passed}`.green, `통과하지 못한 테스트: ${failed}`.red].join('\n'))
+console.log(['테스트 결과입니다.', `통과된 테스트: ${passed}`, `통과하지 못한 테스트: ${failed}`].join('\n'))
 
 const options = {
   hostname: "dnl7koxsek.execute-api.ap-northeast-2.amazonaws.com",
@@ -55,10 +57,10 @@ const result = new Promise((resolve, reject) => {
 
 result.then(result => {
   if (failed !== 0) {
-    console.log('정상적으로 제출이 되었지만 통과하지 못한 테스트가있습니다.', '\n테스트가 모두 통과할 수 있도록 도전해보세요!'.rainbow)
+    console.log('정상적으로 제출이 되었지만 통과하지 못한 테스트가있습니다.', '\n테스트가 모두 통과할 수 있도록 도전해보세요!')
   } else {
-    console.log('정상적으로 제출이 되었고 모든 테스트를 통과하였습니다.'.rainbow)
+    console.log('정상적으로 제출이 되었고 모든 테스트를 통과하였습니다.')
   }
 }).catch(error => {
-  console.log('제출이 실패했습니다. 다시 한 번 제출해주세요.'.magenta)
+  console.log('제출이 실패했습니다. 다시 한 번 제출해주세요.')
 })
