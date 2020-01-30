@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:example": "jest test-example/",
-    "test:recursion": "jest recursion-review/",
-    "test:underbar": "jest underbar-review/",
+    "test:passme": "jest pass-me/",
     "test:watch": "jest --watch",
     "lint": "eslint **/*.js --quiet",
     "submit-test": "jest --json --outputFile=result.json",
