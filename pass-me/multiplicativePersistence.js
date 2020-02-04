@@ -14,7 +14,9 @@ multiplicativePersistence 함수는 양수를 파라미터로 받는 함수로,
 */
 
 function multiplicativePersistence(num) {
-  // your code here
+  // return () => (num < 10 ? num :
+  // num = multiplicativePersistence(String(num).spilt('').reduce((a, b) => a * b), 1));
+  const result = String(num).split('').reduce((a, b) => a * b, 1);
+  return result < 10 ? result : multiplicativePersistence(result);
 }
-
 module.exports = multiplicativePersistence;

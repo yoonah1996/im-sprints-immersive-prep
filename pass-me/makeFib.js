@@ -22,7 +22,11 @@ fn(); // 5
 */
 
 function makeFib() {
-  // your code here
+  let count = 0;
+
+  const finnum = (num) => (num < 2 ? num : finnum(num - 1) + finnum(num - 2));
+
+  return () => { count += 1; return finnum(count - 1); };
 }
 
 module.exports = makeFib;
