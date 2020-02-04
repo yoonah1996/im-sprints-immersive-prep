@@ -13,6 +13,37 @@ console.log(output); // --> {ask: 1, a: 2, bunch: 2, get: 1}
 
 function countWords(input) {
   // your code here
+
+  if (input.length === 0) return {};
+
+  const inputList = input.split(' ');
+
+  return inputList.reduce((acc, curr) => {
+    if (acc[curr] === undefined) {
+      acc[curr] = 1;
+    } else {
+      acc[curr] += 1;
+    }
+
+    return acc;
+  }, {});
+
+
+  // let inputArr = input.split(' ');
+  // let result = {};
+  // if (input === '') {
+  //   return {};
+  // } else {
+  //   for (let val of inputArr) {
+  //     if (!Object.keys(result).includes(val)) {
+  //       result[val] = 1;
+  //     } else {
+  //       result[val] = result[val] + 1;
+  //     }
+  //   }
+  //   return result;
+  // }
 }
+
 
 module.exports = countWords;

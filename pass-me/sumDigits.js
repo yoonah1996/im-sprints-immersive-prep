@@ -13,6 +13,11 @@ console.log(output2); // --> 4
 
 function sumDigits(num) {
   // your code here
+  const numArr = String(num).split('');
+
+  if (num < 0) { numArr.shift(); numArr[0] *= -1; }
+
+  return numArr.map((el) => el * 1).reduce((acc, curr) => acc + curr);
 }
 
 module.exports = sumDigits;
