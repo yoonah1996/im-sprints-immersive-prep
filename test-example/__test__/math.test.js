@@ -11,6 +11,4 @@ const { add, substract, multiply, divide } = require("../math");
 // 5. Create test case to check divide function reutns "cannot divide something with 0"
 // when it tries to divdie a number with zero.
 
-// 6. Group tests using `describe()`
-
-
+// 6. Group tests using `describe()`zz
