@@ -1,9 +1,21 @@
 {
-  "extends": ["airbnb"],
-  "env": {
-    "node": true,
-    "es6": true,
-    "jest": true
-  },
-  "rules": {}
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "ignorePatterns": ["__test__"],
+    "rules": {
+    }
 }

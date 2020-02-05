@@ -5,8 +5,8 @@ describe('transformAsHTML', () => {
   let container;
   let spy;
   beforeEach(() => {
-    global.body.innerHTML = '<ul id="container"></ul>';
-    container = global.getElementById('container');
+    document.body.innerHTML = '<ul id="container"></ul>';
+    container = document.getElementById('container');
     input = [
       {
         firstName: 'Joe', lastName: 'Blow', age: 42, role: 'clerk',

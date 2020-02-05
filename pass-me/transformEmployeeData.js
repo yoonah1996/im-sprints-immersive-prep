@@ -25,14 +25,16 @@
 function transformEmployeeData(array) {
   // return array.map((val) => val.reduce((acc, el) => acc[el[0]] = el[1], {}));
 
-  // return array.map((val) => val.reduce((acc, el) => acc[el[0]] = el[1] return acc, {}));
+  // eslint-disable-next-line prefer-destructuring
+  return array.map((val) => val.reduce((acc, el) => { acc[el[0]] = el[1]; return acc; }, {}));
 
-  return array.map((val) => val.reduce((acc, el) => ({
-    ...acc,
-    [el[0]]: el[1],
-  }), {}));
+  // return array.map((val) => val.reduce((acc, el) => ({
+  //   ...acc,
+  //   [el[0]]: el[1],
+  // }), {}));
 
-  // return array.map((x) => (x.reduce((pre, value) => { pre[value[0]] = value[1]; return pre; }, {})));
+  // return array.map((x) => (x.reduce((pre, value) => {
+  //  pre[value[0]] = value[1]; return pre; }, {})));
 }
 
 module.exports = transformEmployeeData;
