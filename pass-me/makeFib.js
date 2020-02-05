@@ -20,7 +20,9 @@ fn(); // 3
 fn(); // 5
 
 */
-
+// 실행횟수인 count를 0으로 초기화 시킨다.
+// 재귀함수를 작성한다.
+// 누를때 count에 1 더해주고 finnum함수에 num를 넘겨 재귀함수를 실행시킨다.
 function makeFib() {
   let count = 0;
 

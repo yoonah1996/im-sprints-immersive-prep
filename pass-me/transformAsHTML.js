@@ -42,7 +42,24 @@ global.printRole = function (user) {
   // 이 함수 역시 printRole(user) 로 호출할 수 있습니다.
   console.log(user.role);
 };
+// document로 가져온 페이지, HTML의 container를 가져온다
 
+// 배열의 모든 객체를 돌린다.
+// 페이지에 li를 만든다 < >
+// 페이지에 a를 만든다 < >
+// 페이지에 div를 만든다 < >
+
+// a에 class에 name추가시켜준다.
+// div에 class에 age를 추가시켜준다.
+
+// a의 HTML에 firstName + " " + lastName를 너무준다.
+// div의 HTML에  age를 넣어준다.
+
+// container 밑에 li를 넣어준다.
+// li밑에 a를 넣어준다.
+// li밑에 div를 넣어준다.
+
+// 이름을 클릭시 이벤트를 발생시킨다.
 function transformAsHTML(array) {
   const ul = document.querySelector('#container');
   // eslint-disable-next-line no-restricted-syntax

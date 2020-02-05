@@ -10,9 +10,10 @@ console.log(output1); // --> 14
 let output2 = sumDigits(-316);
 console.log(output2); // --> 4
 */
-
+// num을 문자열로 바꾸고 한자리씩 나눠 배열에 넣어준다
+// 만약 num이 0보다 작으면 num을 잘라 넣어둔 배열의 0번째 배열(-)를 빼준다. 그리고 그 배열의 [0]배열에 * 1을 해준다.
+// 배열을 모두 숫자로 바꾼 뒤, 모든 배열을 더해준다.
 function sumDigits(num) {
-  // your code here
   const numArr = String(num).split('');
 
   if (num < 0) { numArr.shift(); numArr[0] *= -1; }
