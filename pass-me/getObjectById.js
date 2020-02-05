@@ -70,6 +70,11 @@ const TREE_DATA = {
     },
   ],
 };
+// 객체에서 id를 찾는 문제
+// 배열 안에 앨리먼트를 돌린다.
+// 배열의 앨리먼트에 id에 지정 받은 id 값이 있다면 그 객체(el) 리턴해준다.
+// 만약 배열의 el에 children키가 있으면
+// 다시 함수를 불러 그 앨리먼트 안에 배열에서 id를 찾아준다.
 
 // eslint-disable-next-line consistent-return
 function getObjectById(json, id) {

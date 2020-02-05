@@ -12,7 +12,8 @@ multiplicativePersistence 함수는 양수를 파라미터로 받는 함수로,
 2 * 0 -> 0
 
 */
-
+// num을 문자열로 바꾼다음 문자 하나나를 잘라 배열에 넣은 다음 reduce 로 각 배열을 모두 곱해준다
+// 만약 모두 곱한 값이 10보다 작다면 그 값을 리턴해주고 아니면 multiplicativePersistence에 값을 넣어 다시 각 자리 수를 곱해둔다.
 function multiplicativePersistence(num) {
   // return () => (num < 10 ? num :
   // num = multiplicativePersistence(String(num).spilt('').reduce((a, b) => a * b), 1));

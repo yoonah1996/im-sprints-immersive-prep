@@ -21,20 +21,11 @@
 * Constraint: 반드시 Array의 map 메소드와 reduce 메소드를 사용해서 문제를 해결해야 합니다.
 
 */
-
+// map으로 array의 앨리먼트를 하나씩 가져와 실행시킨다.
+// 각 앨리먼트에서 reduce로 acc라는 초기값 객체를 만들어 주고 앨리먼트 안에 앨리먼트를 acc[el[0]] = el[1]식으로 객체를 만들어 반환한다.
 function transformEmployeeData(array) {
-  // return array.map((val) => val.reduce((acc, el) => acc[el[0]] = el[1], {}));
-
   // eslint-disable-next-line prefer-destructuring
   return array.map((val) => val.reduce((acc, el) => { acc[el[0]] = el[1]; return acc; }, {}));
-
-  // return array.map((val) => val.reduce((acc, el) => ({
-  //   ...acc,
-  //   [el[0]]: el[1],
-  // }), {}));
-
-  // return array.map((x) => (x.reduce((pre, value) => {
-  //  pre[value[0]] = value[1]; return pre; }, {})));
 }
 
 module.exports = transformEmployeeData;
