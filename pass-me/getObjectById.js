@@ -71,8 +71,17 @@ const TREE_DATA = {
   ],
 };
 
+// eslint-disable-next-line consistent-return
 function getObjectById(json, id) {
-  // your code here
+  // eslint-disable-next-line no-restricted-syntax
+  for (const el of json) {
+    if (el.id === id) {
+      return el;
+    }
+    if (el.children) {
+      return getObjectById(el.children, id);
+    }
+  }
 }
 
 module.exports = {
