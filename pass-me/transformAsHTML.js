@@ -61,7 +61,7 @@ global.printRole = function (user) {
 
 // 이름을 클릭시 이벤트를 발생시킨다.
 function transformAsHTML(array) {
-  const ul = document.qfirstNameuerySelector('#container');
+  const ul = document.querySelector('#container');
   // eslint-disable-next-line no-restricted-syntax
   for (const val of array) {
     const liEliment = document.createElement('li');
