@@ -1,3 +1,4 @@
+/* global */
 /*
 "transformAsHTML" 함수를 작성합니다.
 
@@ -31,7 +32,7 @@
 
 */
 
-global.printRole = function(user) {
+const printRole = function (user) {
   // Joe Blow를 클릭하면 clerk 이
   // Mary Jenkins를 클릭하면 manager 가 찍힙니다.
   // 이 함수는 수정하지 마십시오.
@@ -42,9 +43,27 @@ global.printRole = function(user) {
 };
 
 function transformAsHTML(array) {
-  let container = document.querySelector("#container");
+  const container = document.querySelector('#container');
 
-  // your code here
+  array.forEach((val) => {
+    const liEliment = document.createEliment('li');
+    const aEliment = document.createElement('a');
+    const divEliment = document.createElement('div');
+
+    aEliment.classList.add('name');
+    divEliment.classList.add('age');
+
+    aEliment.innerHTML = `${val.firstname} ${val.lastname}`;
+    divEliment.innerHTML = val.age;
+
+    container.appendChild(liEliment);
+    liEliment.appendChild(aEliment);
+    liEliment.appendChild(divEliment);
+
+    aEliment.onclick = function () {
+      printRole(val);
+    };
+  });
 }
 
 module.exports = transformAsHTML;

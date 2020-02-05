@@ -23,7 +23,11 @@
 */
 
 function transformEmployeeData(array) {
-  // your code here
+  return array.map((x) => (
+    x.reduce((pre, value) => {
+      pre.value[value.length - 1] = value[value.length];
+      return pre;
+    }, {})));
 }
 
 module.exports = transformEmployeeData;
