@@ -32,7 +32,8 @@
 
 */
 
-const printRole = function (user) {
+
+global.printRole = function (user) {
   // Joe Blow를 클릭하면 clerk 이
   // Mary Jenkins를 클릭하면 manager 가 찍힙니다.
   // 이 함수는 수정하지 마십시오.
@@ -43,27 +44,26 @@ const printRole = function (user) {
 };
 
 function transformAsHTML(array) {
-  const container = document.querySelector('#container');
-
-  array.forEach((val) => {
-    const liEliment = document.createEliment('li');
+  const ul = document.querySelector('#container');
+  // eslint-disable-next-line no-restricted-syntax
+  for (const val of array) {
+    const liEliment = document.createElement('li');
     const aEliment = document.createElement('a');
     const divEliment = document.createElement('div');
 
     aEliment.classList.add('name');
     divEliment.classList.add('age');
 
-    aEliment.innerHTML = `${val.firstname} ${val.lastname}`;
+    aEliment.innerHTML = `${val.firstName} ${val.lastName}`;
     divEliment.innerHTML = val.age;
 
-    container.appendChild(liEliment);
+    ul.appendChild(liEliment);
     liEliment.appendChild(aEliment);
     liEliment.appendChild(divEliment);
 
-    aEliment.onclick = function () {
-      printRole(val);
-    };
-  });
+    aEliment.onclick = () => global.printRole(val);
+  }
 }
+
 
 module.exports = transformAsHTML;
